@@ -7,30 +7,26 @@ public class MainGradeBookTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//Cria um scanner para ler os dados inseridos pelo usuário
+		//Cria um scanner para obter entrada de dados pelo usuário
 		Scanner input = new Scanner(System.in);
 		
-		//Cria um objeto para chamar os métodos da classe GradeBook
+		//Cria um objeto para acessar a classe GradeBook
 		GradeBook myGradeBook = new GradeBook();
 		
-		//Pede ao usuário que digite o nome do curso
-		System.out.println("Please enter de Course Name: ");
+		//Exibe o valor inicial da variável courseName da classe GradeBook
+		System.out.printf("Initial courseName is: %s \n\n",myGradeBook.getCourseName());
 		
-		//Atribui o dado inserido pelo usuário a variável nameOfCourse utilizando o objeto input
-		String nameOfCourse = input.nextLine();
+		//Solicita ao usuário que insira o nome do curso
+		System.out.println("Please Enter your Course Name: ");
+		String theName = input.nextLine();// Lê o que o usuário digitou e atribui a variável theName
+		myGradeBook.setCourseName(theName);/*Configura o nome do curso, aqui a variável 
+		theName é passada como argumento para o método setCourseName, que na classe GradeBook
+		é atribuido ao parâmetro Name, que é atribuido a variável de instância courseName*/
+		System.out.println();//Pula uma linha
 		
-		//Pula uma linha
-		
-		
-		//Chama o método displayMessage da classe GradeBook, com o parâmetro name OfCourse, através do objeto myGradeBook
-		myGradeBook.displayMessage(nameOfCourse);
-
+		//Exibe a mensagem de boas vindas com o método displayMessage
+		myGradeBook.displayMessage();
 	}//Fim do metodo main
 
 }//Fim da classe MainGradeBookTest
 
-/* Ao final deste programa o parâmetro courseName, do método displayMessage da classe
-GradeBook, recebe o valor da variável nameOfCourse,
-Que nesta Classe (Main) recebe o valor do objeto input que recebe o valor do dado 
-inserido pelo usuário.
-*/

@@ -1,11 +1,18 @@
 package defalt;
 
-/*Classe com variável de instância courseName e métodos get e set
- * para obter e configurar seu valor*/
+/*Classe com construtor para inicializar o nome do curso (courseName)*/
 
 public class GradeBook {
 	
 	private String courseName; //Variável de instância courseName
+	
+	//Construtor para inicializar courseName com um argumento String
+	/*Colocando um construtor podemos criar vários objetos, na classe main,
+	 * com inicializações diferentes.*/
+	public GradeBook(String Name)
+	{
+		courseName = Name; //Inicializa courseName
+	}
 	
 	//Metodo que Configura o nome do curso
 	public void setCourseName(String Name) //Aqui Name é passado como parâmetro

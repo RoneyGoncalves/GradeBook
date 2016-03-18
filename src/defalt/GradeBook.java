@@ -2,9 +2,9 @@ package defalt;
 
 public class GradeBook {
 	//Exibe a mensagem de boas vindas
-	public void displayMessage()
+	public void displayMessage(String courseName)//Método parametrizado
 	{
-		System.out.println("Welcome to the Grade Book!");
+		System.out.printf("Welcome to the Grade Book for\n%s!\n",courseName);
 	} //Fim do método
 
 }//Fim da classe GradeBook
